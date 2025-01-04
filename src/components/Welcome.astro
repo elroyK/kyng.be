@@ -1,0 +1,61 @@
+---
+import kyngLogo from '../assets/kyng.svg';
+---
+
+<div id="container">
+  <img id="logo" src={kyngLogo.src} alt="" fetchpriority="high" />
+  <div id="content">
+    <h1>Kyng Studio</h1>
+    <h3>Coming Soon</h3>
+    <p>Thanks for visiting my website. I am currently working on a revamp.</p>
+    <p>Stay tuned for the updated version!</p>
+    <p>
+      In the meantime, feel free to <a href="mailto:kyngstudio@gmail.com"
+        >contact me</a
+      > for inquiries or visit the <a href="https://archive.kyng.be/"
+        >archived version</a
+      >.
+    </p>
+  </div>
+</div>
+
+<style lang="scss">
+  #container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    #logo {
+      height: 30vh;
+    }
+
+    #content {
+      text-align: center;
+      h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    #container {
+      flex-direction: row;
+      gap: 2rem;
+
+      #logo {
+        height: 60vh;
+      }
+
+      #content {
+        text-align: left;
+
+        h3 {
+          font-size: 4.5rem;
+        }
+      }
+    }
+  }
+</style>
