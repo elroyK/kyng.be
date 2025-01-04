@@ -1,5 +1,7 @@
 ---
 import kyngLogo from '../assets/kyng.svg';
+
+const email = import.meta.env.PUBLIC_EMAIL;
 ---
 
 <div id="container">
@@ -10,11 +12,14 @@ import kyngLogo from '../assets/kyng.svg';
     <p>Thanks for visiting my website. I am currently working on a revamp.</p>
     <p>Stay tuned for the updated version!</p>
     <p>
-      In the meantime, feel free to <a href="mailto:kyngstudio@gmail.com"
-        >contact me</a
-      > for inquiries or visit the <a href="https://archive.kyng.be/"
-        >archived version</a
-      >.
+      In the meantime, feel free to
+      {
+        email && (
+          <>
+            <a href={'mailto:' + email}>contact me</a> for inquiries or
+          </>
+        )
+      } visit the <a href="https://archive.kyng.be/">archived version</a>.
     </p>
   </div>
 </div>
