@@ -5,5 +5,9 @@ import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: netlify()
+  adapter: netlify(),
+  redirects: {
+    '/github': 'https://github.com/elroyK/',
+    '/linkedin': 'https://www.linkedin.com/in/kyngstudio/',
+  },
 });
